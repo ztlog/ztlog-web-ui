@@ -13198,6 +13198,10 @@ header.masthead .post-heading .meta a {
 .breadcrumb-link {
   color: #6c757d;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
 }
 
 .breadcrumb-link:hover {

@@ -39,7 +39,7 @@ export default function CategoriesList() {
       .catch(function (error) {
         console.log(error);
       });
-  }, [searchParams?.toString()]);
+  }, [searchParams]);
 
   useEffect(() => {
     if (!selectedCategory) return;
@@ -68,7 +68,7 @@ export default function CategoriesList() {
     router.push('/');
   };
 
-  const handlePageChange = (page: any) => {
+  const handlePageChange = (page: number) => {
     setPage(page);
   };
 
@@ -76,9 +76,9 @@ export default function CategoriesList() {
     return (
       <div className="col-md-10 col-lg-8 col-xl-7 list-section list-section-padded">
         <div className="tag-breadcrumb">
-          <span className="breadcrumb-link" onClick={handleBack}>
+          <button className="breadcrumb-link" onClick={handleBack}>
             HOME
-          </span>
+          </button>
           <span className="breadcrumb-sep">/</span>
           <span className="breadcrumb-current">{selectedCategory.cateNm}</span>
           <span className="breadcrumb-count">{total}</span>
@@ -160,9 +160,9 @@ export default function CategoriesList() {
   return (
     <div className="col-md-10 col-lg-8 col-xl-7 list-section list-section-padded">
       <div className="tag-breadcrumb">
-        <span className="breadcrumb-link" onClick={handleBack}>
+        <button className="breadcrumb-link" onClick={handleBack}>
           Categories
-        </span>
+        </button>
         <span className="breadcrumb-sep">/</span>
         <span className="breadcrumb-current">All</span>
       </div>

@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable array-callback-return */
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -42,14 +41,18 @@ export default function ContentsList() {
       });
   }, [page]);
 
-  const handlePageChange = (p: any) => {
+  const handlePageChange = (p: number) => {
     router.push(`/?page=${p}`);
   };
 
   return (
     <div className="col-md-10 col-lg-8 col-xl-7 list-section">
       <div className="list-content">
-        {ctnt && ctnt.length > 0 ? (
+        {loading ? (
+          <div className="spinner-wrap">
+            <div className="spinner" />
+          </div>
+        ) : ctnt.length > 0 ? (
           ctnt.map((e) => (
             <div key={e.ctntNo} className="post-preview">
               <Link href={`/contents/${e.ctntNo}`}>
@@ -97,9 +100,7 @@ export default function ContentsList() {
             </div>
           ))
         ) : (
-          <div className="spinner-wrap">
-            <div className="spinner" />
-          </div>
+          <p>게시물이 없습니다.</p>
         )}
       </div>
       <div className="d-flex justify-content-center mb-4 pagnation">
