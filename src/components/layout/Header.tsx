@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
-import { useTheme } from 'contexts';
+import { useTheme } from '@/contexts';
 import { useRouter } from 'next/navigation';
 
 export default function Header() {

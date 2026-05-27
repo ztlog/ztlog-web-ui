@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquareNeo@1.0/css/NanumSquareNeo.css');
+
 @font-face {
   font-family: 'NanumSquareRound';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
@@ -12519,6 +12522,7 @@ header.masthead .post-heading .meta a {
 }
 
 .wmde-markdown {
+  font-size: 0.9rem !important;
   font-family: "NanumSquareRound", sans-serif !important;
 }
 
@@ -12531,8 +12535,9 @@ header.masthead .post-heading .meta a {
 
 .post-header h1,
 .post-header .h1 {
-  font-size: 2.25rem;
-  font-family: "NanumSquareRound";
+  /* font-size: 2.25rem; */
+  font-family: "NanumSquareNeoExtraBold";
+  font-weight: 600;
 }
 
 .post-header .meta,
@@ -12566,7 +12571,7 @@ header.masthead .post-heading .meta a {
 @media (min-width: 992px) {
   .post-header h1,
   .post-header .h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .post-header .subheader {
@@ -12655,15 +12660,17 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a > .post-title {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
-  font-family: "NanumSquareRound";
+  /* font-family: "NanumSquareRound"; */
+  font-family: "NanumSquareNeoExtraBold";
 }
 
 .post-preview > a > .post-subtitle {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   margin: 0.625rem 0px;
   font-family: "NanumSquareRound";
 }
@@ -12693,7 +12700,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > .post-meta > p {
   margin: 5px 0px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 @media (min-width: 992px) {
@@ -13054,7 +13061,7 @@ header.masthead .post-heading .meta a {
 .article {
   margin-top: 1.875rem;
   margin-bottom: 1.625rem;
-  font-family: "NanumSquareRound";
+  /* font-family: "NanumSquareRound"; */
 }
 
 [data-tooltip-text]:hover {

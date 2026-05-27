@@ -2,8 +2,8 @@
 
 import { PropsWithChildren } from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
-import { useStore } from 'store';
-import { ThemeProvider, ResponsiveProvider } from 'contexts';
+import { useStore } from '@/store';
+import { ThemeProvider, ResponsiveProvider } from '@/contexts';
 
 export default function Providers({ children }: PropsWithChildren) {
   const store = useStore();

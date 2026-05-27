@@ -1,7 +1,7 @@
 'use client';
 
 import Giscus from '@giscus/react';
-import { useTheme } from 'contexts';
+import { useTheme } from '@/contexts';
 
 export default function Comments() {
   const { theme } = useTheme();
