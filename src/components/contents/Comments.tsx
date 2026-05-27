@@ -9,7 +9,7 @@ export default function Comments() {
   return (
     <Giscus
       id="comments"
-      repo="ztlog-project/ztlog-comment"
+      repo="ztlog/ztlog-comment"
       repoId="R_kgDOLNvWbw"
       category="General"
       categoryId="DIC_kwDOLNvWb84C3pDU"
