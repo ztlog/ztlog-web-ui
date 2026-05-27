@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import TagsList from 'components/tags/TagsList';
+import TagsList from '@/components/tags/TagsList';
 
 export default function TagsPage() {
   return (

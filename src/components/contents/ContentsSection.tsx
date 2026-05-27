@@ -10,7 +10,7 @@ import axios from 'axios';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import Comments from './Comments';
 import dayjs from 'dayjs';
-import { useTheme } from 'contexts';
+import { useTheme } from '@/contexts';
 
 export default function ContentsSection() {
   const { theme } = useTheme();

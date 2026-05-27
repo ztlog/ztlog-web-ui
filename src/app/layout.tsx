@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import Providers from './providers';
-import ClientLayout from 'components/layout/ClientLayout';
+import ClientLayout from '@/components/layout/ClientLayout';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'lib/fontawesome';
-import 'styles/Styles.css';
-import 'styles/DarkMode.css';
+import '@/lib/fontawesome';
+import '@/styles/Styles.css';
+import '@/styles/DarkMode.css';
 
 config.autoAddCss = false;
 

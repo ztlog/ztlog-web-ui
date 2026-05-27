@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import CategoriesList from 'components/categories/CategoriesList';
+import CategoriesList from '@/components/categories/CategoriesList';
 
 export default function CategoriesPage() {
   return (

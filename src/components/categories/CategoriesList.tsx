@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import axios from 'axios';
+import dayjs from 'dayjs';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTags, faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarDays } from '@fortawesome/free-regular-svg-icons';
-import dynamic from 'next/dynamic';
+
 const Pagination = dynamic(() => import('react-js-pagination'), { ssr: false });
-import axios from 'axios';
-import dayjs from 'dayjs';
 
 export default function CategoriesList() {
   const [categories, setCategories] = useState<any[]>([]);

@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import axios from 'axios';
+import dayjs from 'dayjs';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTags, faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarDays } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+
 const Pagination = dynamic(() => import('react-js-pagination'), { ssr: false });
-import axios from 'axios';
-import dayjs from 'dayjs';
 
 export default function ContentsList() {
   const router = useRouter();
@@ -57,7 +58,7 @@ export default function ContentsList() {
             <div key={e.ctntNo} className="post-preview">
               <Link href={`/contents/${e.ctntNo}`}>
                 <h2 className="post-title">{e.title}</h2>
-                <h3 className="post-subtitle">{e.subTitle} . . .</h3>
+                <h3 className="post-subtitle">{e.subTitle} ...</h3>
               </Link>
               <div className="post-meta">
                 <p>
