@@ -11,6 +11,7 @@ import MarkdownPreview from '@uiw/react-markdown-preview';
 import Comments from './Comments';
 import dayjs from 'dayjs';
 import { useTheme } from '@/contexts';
+import { appendSanitize } from '@/lib/markdownSanitize';
 
 export default function ContentsSection() {
   const { theme } = useTheme();
@@ -59,7 +60,11 @@ export default function ContentsSection() {
 
         <div className="content-box">
           <br />
-          <MarkdownPreview source={post.body} wrapperElement={{ 'data-color-mode': theme }} />
+          <MarkdownPreview
+            source={post.body}
+            pluginsFilter={appendSanitize}
+            wrapperElement={{ 'data-color-mode': theme }}
+          />
           <br />
         </div>
         <div className="post-footer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
